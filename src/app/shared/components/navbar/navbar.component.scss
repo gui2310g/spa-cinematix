@@ -1,0 +1,40 @@
+@use "../../utils/flex.scss";
+@use "../../utils/widthHeight.scss";
+
+header {
+    width: 100%;
+    background-color: #032440;
+    padding: 1rem;
+}
+
+#navbar {
+    @include flex.flex(row, center, center, 0.7rem, none);
+    
+    a {
+        text-decoration: none;
+        color: #52a3ea;
+    }
+
+    #form {
+        @include flex.flex(row, none, none, 0.7rem, none);
+        @include widthHeight.widthHeight(100%, 800px, 100%);
+   
+        #button {
+            @include widthHeight.widthHeight(100%, 30px, 30px);
+            border-style: none;
+            border-radius: 5px;
+            background: linear-gradient(to right, #19CEB6, #12C3C8, #07B7DE);
+            cursor: pointer;
+    
+            img { width: 20px }
+        }
+    
+        input {
+            width: 100%;
+            border-radius: 5px;
+            border-style: none;
+    
+            &::placeholder { padding: 10px; }
+        }
+    }
+}
