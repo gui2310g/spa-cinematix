@@ -1,7 +1,6 @@
 <main>
-    <section id="popular">
-        @for (movie of movies; track movie.id) {
-            <h2>{{movie.title}}</h2>
-        }
-    </section>
+    <app-movieslist title="Now Playing"/>
+    <app-movieslist title="Popular"/>
+    <app-movieslist title="Top Rated"/>
+    <app-movieslist title="Upcoming"/>
 </main>

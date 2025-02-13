@@ -14,4 +14,16 @@ export class MovieService {
   getPopularMovies(): Observable<Movie[]> {
     return this.http.get<Movie[]>(`${this.apiUrl}/movies/popular`);
   }
+
+  getUpcomingMovies(): Observable<Movie[]> {
+    return this.http.get<Movie[]>(`${this.apiUrl}/movies/upcoming`);
+  }
+
+  getTopRatedMovies(): Observable<Movie[]> {
+    return this.http.get<Movie[]>(`${this.apiUrl}/movies/toprated`);
+  }
+
+  getNowPlayingMovies(): Observable<Movie[]> {
+    return this.http.get<Movie[]>(`${this.apiUrl}/movies/nowplaying`);
+  }
 }

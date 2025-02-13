@@ -1,0 +1,24 @@
+@use "../../utils/flex.scss";
+
+.movies {
+    margin-bottom: 50px;
+
+    h1 { 
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .movie-card {
+        @include flex.flex(row, none, none, 25px, none);
+        overflow: auto;
+
+        img { max-height: 300px;}
+
+        &::-webkit-scrollbar { width: 2px;}
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgb(106, 106, 106);  
+            border-radius: 20px;
+        }
+    }
+}

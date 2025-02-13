@@ -1,0 +1,12 @@
+<article class="movies">
+    <h1>{{title}}</h1>
+    
+    <section class="movie-card">
+        @for (movie of movies; track movie.id) {
+            <a routerLink="">
+                <img [src]="imgUrl + movie.poster_path" [alt]="movie.title">
+            </a>
+        }
+    </section>    
+</article>
+
