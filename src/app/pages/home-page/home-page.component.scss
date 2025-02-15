@@ -1,4 +1,39 @@
+@use "../../shared/utils/flex.scss";
+@use "../../shared/utils/widthHeight.scss";
+
 main { 
     margin: 0 auto;
-    max-width: 90%;
+    @include widthHeight.widthHeight(100%, 100%, 100%);
+
+    .titles {
+        @include flex.flex(none, center, center, none, none);
+        height: 700px;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        ;
+        &:before {
+            @include widthHeight.widthHeight(100%, 100%, 100%);
+            position: absolute;
+            content: '';
+
+            z-index: 0; 
+        }
+        
+        .title {
+            z-index: 1; 
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            animation: showbackground 2s ease-in-out forwards; 
+
+            h1 {color:  #fde400}
+        }
+    }
+}
+
+@keyframes showbackground {
+    0% { opacity: 0; }
+
+    100% { opacity: 1; }
 }
