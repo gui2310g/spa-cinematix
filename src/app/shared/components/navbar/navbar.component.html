@@ -2,9 +2,18 @@
     <nav id="navbar">
         <a routerLink="/"><h2>Cinematix</h2></a>    
 
-        <form id="form">
-            <input type="text" placeholder="Search a movie">
-            <button id="button"><img src="/search.png" alt="img button"></button>
+        <form id="form" (ngSubmit)="handleSubmit()">
+            <input 
+            type="text" 
+            placeholder="Search a movie" 
+            class="input"
+            [(ngModel)]="search"
+            name="search"
+        />
+        
+        <button id="button" type="submit">
+            <img src="/search.png" alt="img button">
+        </button>
         </form>
     </nav>
 </header>

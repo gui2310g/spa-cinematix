@@ -9,7 +9,7 @@ header {
 
 #navbar {
     @include flex.flex(row, center, center, 0.7rem, none);
-    
+
     a {
         text-decoration: none;
         color: #fde400;
@@ -18,27 +18,27 @@ header {
     #form {
         @include flex.flex(row, none, none, 0.7rem, none);
         @include widthHeight.widthHeight(100%, 800px, 100%);
-   
+
         #button {
             @include widthHeight.widthHeight(100%, 30px, 30px);
             border-style: none;
             border-radius: 5px;
             background: linear-gradient(to right, #928d02, #f2ff00, #928d02);
             cursor: pointer;
-    
-            &:hover { 
-                background: linear-gradient(to right, #f2ff00, #928d02, #f2ff00); 
+
+            &:hover {
+                background: linear-gradient(to right, #f2ff00, #928d02, #f2ff00);
                 transition: 0.5 all;
             }
 
             img { width: 20px }
         }
-    
+
         input {
             width: 100%;
             border-radius: 5px;
             border-style: none;
-    
+
             &::placeholder { padding: 10px; }
         }
     }

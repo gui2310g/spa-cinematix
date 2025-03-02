@@ -26,4 +26,9 @@ export class MovieService {
   getNowPlayingMovies(): Observable<Movie[]> {
     return this.http.get<Movie[]>(`${this.apiUrl}/movies/nowplaying`);
   }
+
+  getSearchedMovies(query: string): Observable<Movie[]> {
+    return this.http.get<Movie[]>(`${this.apiUrl}/movies/search?query=${query}`);
+  }
+
 }

@@ -1,0 +1,13 @@
+<article>
+  @if(movies.length > 0) {
+    <h2>Results from <span>{{query}}</span></h2>
+
+    <section class="card">
+      @for (movie of movies; track movie.id) {
+        <a routerLink="/movie/{{movie.id}}">
+          <img [src]="imgUrl + movie.poster_path" [alt]="movie.title">
+        </a>
+      }
+    </section>
+  }
+</article>
