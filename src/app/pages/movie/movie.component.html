@@ -1,0 +1,27 @@
+<main id="main">
+  @if(movie) {
+  <article>
+    <div class="div1" style="background-image: url({{imgUrl}}{{movie.backdrop_path}});">
+      <div class="div1-left">
+        <img src="{{ imgUrl }}{{ movie.poster_path }}" alt="{{ movie.title }}"/>
+      </div>
+
+      <div class="div1-right">
+        <h1>{{ movie.title }}</h1>
+        <p>{{ movie.overview }}</p>
+        <p>Release Date: {{ movie.release_date }}</p>
+        <p>Rating: {{ movie.popularity }}</p>
+        <p>Genres:
+          @for(Genre of moviesGenres; track Genre.id) {<span>{{ Genre.name }}</span>}
+        </p>
+        <p>
+          Companies: @for(company of moviesProductionCompanies; track
+          company.id) { <span>{{ company.name }}</span> }
+        </p>
+      </div>
+    </div>
+  </article>
+  } @else {
+    <h1>No movie found</h1>
+  }
+</main>

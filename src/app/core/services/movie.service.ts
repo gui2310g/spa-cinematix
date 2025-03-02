@@ -31,4 +31,7 @@ export class MovieService {
     return this.http.get<Movie[]>(`${this.apiUrl}/movies/search?query=${query}`);
   }
 
+  getMovie(id: number): Observable<Movie> {
+    return this.http.get<Movie>(`${this.apiUrl}/movies/${id}`);
+  }
 }

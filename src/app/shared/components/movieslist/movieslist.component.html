@@ -1,12 +1,16 @@
 <article class="movies">
+  @if(movies.length > 0) {
     <h1>{{title}}</h1>
-    
+
     <section class="movie-card">
         @for (movie of movies; track movie.id) {
-            <a routerLink="">
+            <a routerLink="/movie/{{movie.id}}">
                 <img [src]="imgUrl + movie.poster_path" [alt]="movie.title">
             </a>
         }
-    </section>    
+    </section>
+  } @else {
+    <h1>No movies found</h1>
+  }
 </article>
 
